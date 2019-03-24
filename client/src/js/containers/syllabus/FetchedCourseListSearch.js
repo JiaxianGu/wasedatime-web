@@ -26,6 +26,8 @@ import {
   gaApplyFilter,
   gaRemoveFilter
 } from "../../ga/eventActions";
+import { toggleFilter } from "../../reducers/toggleFilter";
+
 
 const ExtendedWrapper = styled(Wrapper)`
   flex: 1 0 0;
@@ -56,7 +58,7 @@ const modalStyle = {
   }
 };
 
-class FetchedCourseSearch extends React.Component {
+class FetchedCourseListSearch extends React.Component {
   constructor(props) {
     super(props);
     const parsedSearch = queryString.parse(this.props.location.search);
@@ -301,4 +303,12 @@ class FetchedCourseSearch extends React.Component {
   }
 }
 
-export default withRouter(withNamespaces("translation")(FetchedCourseSearch));
+// const mapStateToProps = (state, ownProps) => {
+//   return {
+//     selectedSortingOption: getSortingOption(
+//       state.addedCourses[ownProps.semesterKey]
+//     )
+//   };
+// };
+
+export default withRouter(withNamespaces("translation")(FetchedCourseListSearch));

@@ -11,7 +11,7 @@ import {
   CHANGE_COURSE_COLOR,
   TOGGLE_COURSE_VISIBILITY,
   CHANGE_COURSES_SORTING_OPTION,
-  SELECTED_FILTER_CONDITION
+  TOGGLE_FILTER
 } from "./types";
 import * as schema from "../data/schema";
 import { wasetimeApiStatic } from "../config/api";
@@ -90,9 +90,10 @@ export const changeCoursesSortingOption = (sortingOption, semester) => ({
   }
 });
 
-export const selectedFilterCondition = value => ({
-  type: SELECTED_FILTER_CONDITION,
+export const toggleFilter = (inputName, value) => ({
+  type: TOGGLE_FILTER,
   payload: {
+    inputName,
     value
   }
-})
+});
