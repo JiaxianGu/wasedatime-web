@@ -1,3 +1,4 @@
+/*
 import { combineReducers } from 'redux';
 import {
   TOGGLE_FILTER
@@ -31,3 +32,4 @@ const toggleFilter = (state = filterGroups, action) => {
       return state;
   }
 }
+*/
